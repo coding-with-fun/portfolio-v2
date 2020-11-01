@@ -1,0 +1,39 @@
+.footer__container {
+    background-color: #ffffff;
+    color: #5a5a5a;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px 0;
+
+    hr {
+        margin: 5px auto;
+        max-width: 420px;
+    }
+
+    span {
+        padding: 0 3px;
+    }
+
+    .fa-heart {
+        color: #ff0000;
+    }
+
+    .fa-mug-hot {
+        color: #000000;
+    }
+
+    a {
+        font-weight: 700;
+        text-decoration: none;
+        color: #5a5a5a;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer__container {
+        font-size: 15px;
+    }
+}

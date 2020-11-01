@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Tangerine:wght@400;700&display=swap");
+
+@import "./components/Body.scss";
+@import "./components/Footer.scss";
+@import "./components/Loading.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: url(../assets/bg.jpg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .main__container {
+        font-weight: 400;
+        height: 100vh;
+        overflow: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        .invisible {
+            display: none;
+        }
+
+        .visible {
+            display: inherit;
+        }
+
+        .body_main__container {
+            height: 100vh;
+        }
+    }
+
+    .main__container::-webkit-scrollbar {
+        display: none;
+    }
+}

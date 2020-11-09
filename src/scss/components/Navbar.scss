@@ -1,0 +1,175 @@
+.navbar__container {
+    position: fixed;
+    top: 0;
+
+    height: 65px;
+    width: 100%;
+
+    padding-top: 10px;
+    z-index: 1;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        color: var(--dark);
+        text-decoration: none;
+    }
+
+    .left__container {
+        margin-left: 20px;
+        font-family: "Sacramento", cursive;
+
+        .logo__container,
+        .short_logo__container {
+            font-size: 30px;
+        }
+
+        .short_logo__container {
+            display: none;
+        }
+    }
+
+    .right__container {
+        .menu__button {
+            display: none;
+        }
+
+        a {
+            margin-right: 20px;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        a::after {
+            content: "";
+            width: 0px;
+            height: 2px;
+            display: block;
+            background: #212529;
+            transition: width 300ms linear;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar__container {
+        .left__container {
+            .logo__container {
+                display: none;
+            }
+
+            .short_logo__container {
+                display: block;
+                margin-top: 16px;
+            }
+        }
+
+        .right__container {
+            .menu__button {
+                display: flex;
+                cursor: pointer;
+                flex-direction: column;
+                margin-right: 20px;
+
+                .menu__line {
+                    z-index: 2;
+                    height: 4px;
+                    width: 32px;
+                    background-color: #000000;
+                    border-radius: 15px;
+                }
+
+                .menu__line:nth-child(1) {
+                    transform: translateY(-5px);
+                    transition: transform 300ms linear;
+                }
+
+                .menu__line:nth-child(3) {
+                    transform: translateY(5px);
+                    transition: transform 300ms linear;
+                }
+            }
+
+            .is_open {
+                .menu__line:nth-child(1) {
+                    transform: translateY(4px) rotate(45deg);
+                    transition: transform 300ms linear;
+                }
+
+                .menu__line:nth-child(2) {
+                    transform: translateX(0);
+                    opacity: 0;
+                    transition: transform 300ms linear, opacity 300ms linear;
+                }
+
+                .menu__line:nth-child(3) {
+                    transform: translateY(-4px) rotate(-45deg);
+                    transition: transform 300ms linear;
+                }
+            }
+
+            .page_links {
+                background-color: #ffffff;
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                transition: transform 300ms ease-in-out;
+
+                a {
+                    margin-right: 0;
+                    font-size: 20px;
+                    margin: 10px 0;
+                }
+            }
+
+            .is_open + .page_links {
+                animation: open_links 300ms linear;
+                opacity: 1;
+                transition: opacity 300ms linear;
+            }
+
+            @keyframes open_links {
+                0% {
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            .is_close + .page_links {
+                animation: close_links 300ms linear;
+                transform: translateX(100%);
+                opacity: 0;
+                transition: opacity 300ms linear;
+            }
+
+            @keyframes close_links {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+        }
+    }
+}

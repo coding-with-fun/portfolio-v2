@@ -1,0 +1,91 @@
+.about__container {
+    .about__header {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+
+        .header {
+            font-family: "Montserrat", sans-serif;
+            border-bottom: 3px solid var(--dark);
+            margin-bottom: 10px;
+            font-size: xx-large;
+            font-weight: 700;
+        }
+    }
+
+    .about__content {
+        text-align: justify;
+
+        p {
+            b {
+                color: #ff7000;
+                font-weight: 800 !important;
+            }
+        }
+
+        span {
+            color: #ff0000;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            font-style: italic;
+            color: #212529;
+            font-weight: 700;
+        }
+    }
+
+    hr {
+        border-top: 4px solid rgba(0, 0, 0, 0.1);
+        margin: 1.5rem auto;
+    }
+
+    .skills__content {
+        .skill__heading {
+            margin-bottom: 0.9rem;
+            font-weight: 900;
+            font-size: larger;
+        }
+
+        .skill__container {
+            .skill {
+                padding: 5px 0;
+                word-spacing: 5px;
+
+                .header {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .resume__container {
+        display: flex;
+        justify-content: center;
+
+        p {
+            margin: 2rem 0 1rem 0;
+            cursor: pointer;
+            width: fit-content;
+            border-radius: 5px;
+            border: 1px solid #212529;
+            padding: 8px 15px;
+            transition: background-color 200ms linear;
+
+            a {
+                text-decoration: none;
+                color: #212529;
+                transition: color 200ms linear;
+            }
+        }
+
+        p:hover {
+            background-color: #212529;
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.scroll_to_top__container {
+    position: absolute;
+    top: -55px;
+    right: 10px;
+    background-color: #000000;
+    padding: 10px 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--white);
+}
+
+.scroll_to_top__container:hover {
+    color: var(--white);
+}

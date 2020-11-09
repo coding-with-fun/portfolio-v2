@@ -1,14 +1,16 @@
 import React from "react";
-import Logo from "../assets/logo.png";
+import About from "./Body/About";
+import ContactMe from "./Body/ContactMe";
+import Home from "./Body/Home";
+import Projects from "./Body/Projects";
 
 const Body = () => {
     return (
         <div className="body__container">
-            <div className="img__container">
-                <img src={Logo} alt="Logo" />
-            </div>
-            <div className="logo">Arc Coder</div>
-            <div className="details">Coming Soon</div>
+            <Home />
+            <About />
+            <Projects />
+            <ContactMe />
         </div>
     );
 };

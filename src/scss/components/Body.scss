@@ -1,57 +1,15 @@
+@import "./Body/About.scss";
+@import "./Body/ContactMe.scss";
+@import "./Body/Home.scss";
+@import "./Body/Projects.scss";
+
 .body__container {
-    font-family: "Tangerine", cursive;
-    transform: translateY(20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #000000;
-
-    .img__container {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 100px;
-
-        img {
-            height: 100px;
-            width: 100px;
-        }
-    }
-
-    .logo {
-        font-size: 100px;
-        font-weight: 600;
-        margin-top: 30px;
-    }
-
-    .details {
-        font-size: 150px;
-        margin-top: 30px;
-        font-weight: 400;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .body__container {
-        transform: translateY(40px);
-
-        .img__container {
-            padding: 15px;
-            border-radius: 50px;
-
-            img {
-                height: 50px;
-                width: 50px;
-            }
-        }
-
-        .logo {
-            font-size: 35px;
-            margin-top: 30px;
-        }
-
-        .details {
-            margin-top: 30px;
-            font-size: 50px;
-        }
+    .about__container,
+    .contact_me__container,
+    .home__container,
+    .projects__container,
+    .skills__container {
+        min-height: calc(100vh - 2 * 77px);
+        padding-top: 65px;
     }
 }

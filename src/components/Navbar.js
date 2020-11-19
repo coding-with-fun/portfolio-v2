@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
@@ -57,6 +58,9 @@ const Navbar = () => {
                     >
                         Contact Me
                     </HashLink>
+                    <Link to="/privacy-policy" onClick={() => toggleMenu()}>
+                        Privacy Policy
+                    </Link>
                 </div>
             </div>
         </div>

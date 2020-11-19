@@ -5,6 +5,7 @@ import {
     Switch,
 } from "react-router-dom";
 import Body from "./components/Body";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
@@ -17,6 +18,7 @@ function App() {
                 <Switch>
                     <Route exact path="/" component={Body} />
                     <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/privacy-policy" component={PrivacyPolicy} />
                     <Route path="*">
                         <Redirect to="/" />
                     </Route>

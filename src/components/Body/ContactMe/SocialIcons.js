@@ -8,7 +8,6 @@ import Gmail from "../../../assets/socialIcons/gmail.svg";
 import Google from "../../../assets/socialIcons/google.svg";
 import Instagram from "../../../assets/socialIcons/instagram.svg";
 import LinkedIn from "../../../assets/socialIcons/linkedin.svg";
-import Medium from "../../../assets/socialIcons/medium.svg";
 import Twitter from "../../../assets/socialIcons/twitter.svg";
 import Whatsapp from "../../../assets/socialIcons/whatsapp.svg";
 import YouTube from "../../../assets/socialIcons/youtube.svg";
@@ -84,13 +83,6 @@ const SocialIcons = () => {
             </a>
             <a href="http://dev.to/arc__coder" target="_blank" rel="noreferrer">
                 <img src={DevTo} alt="Dev.to Logo" />
-            </a>
-            <a
-                href="https://medium.com/@harsh.arccoder"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <img src={Medium} alt="Medium Logo" />
             </a>
         </div>
     );
